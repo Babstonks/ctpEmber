@@ -1,5 +1,5 @@
 import Service from '@ember/service';
-import { dProducts, dPromos } from 'tds/data/datas';
+import { dProducts, dPromos } from 'ctp/data/datas';
 
 export default class ProductServicesService extends Service {
   products = dProducts;

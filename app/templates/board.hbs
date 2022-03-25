@@ -7,9 +7,17 @@
 <h2>Orders</h2>
 <ul>
   {{#each @model.orders as |order|}}
-    <li>
+    <li class="ui hourglass icon">
+      {{#if order.isPrepared}}
+        <i class="check yellow icon"></i>
+      {{else}}
+        <i class="hourglass outline yellow icon"></i>
+      {{/if}}
       <LinkTo @route="order" @model={{order.id}}>
         {{order.dateCreation}} <span class="ui circular label">{{order.count}}</span>
+        {{#if order.toPay}}
+          <label class="ui yellow label">{{order.toPay}} €</label>
+        {{/if}}
       </LinkTo>
     </li>
   {{/each}}
