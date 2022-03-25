@@ -1,5 +1,5 @@
 import Model, { attr, hasMany, belongsTo } from '@ember-data/model';
-
+import { action } from '@ember/object';
 export default class OrderModel extends Model {
   @attr('date') dateCreation;
   @attr('number') amount;

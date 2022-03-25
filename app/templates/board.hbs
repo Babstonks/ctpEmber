@@ -7,7 +7,7 @@
 <h2>Orders</h2>
 <ul>
   {{#each @model.orders as |order|}}
-    <li class="ui hourglass icon">
+    <li>
       {{#if order.isPrepared}}
         <i class="check yellow icon"></i>
       {{else}}

@@ -1,2 +1,9 @@
 {{page-title "Order"}}
+<button class="ui button brown" type="button" {{action "return"}}>Retour aux commandes à préparer</button>
+<br><br>
+<span class="ui label black"> {{@model.user.name}}  ({{@model.user.email}}) </span>
+<br><br>
+<span class="ui label"> {{@model.dateCreation}} </span>
+<br><br>
+<h2>Produits préparés ({{@model.count}})</h2>
 {{outlet}}
